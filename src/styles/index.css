@@ -1,9 +1,17 @@
 /* 
     General Styles
 */
+
+#app {
+    background-image: url("../img/fondoAgenda.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
 .navbar, footer{
     background-color: #343a40;
 }
+
 #logo{
     height: 5vh;
 }
