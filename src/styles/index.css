@@ -2,8 +2,8 @@
     General Styles
 */
 
-#app {
-    background-image: url("../img/fondoAgenda.jpeg");
+body {
+    background: url("/fondoAgenda.jpeg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
 }
