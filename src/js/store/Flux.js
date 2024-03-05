@@ -1,3 +1,6 @@
+import avatar1 from "../../img/Avatar1.png"
+import avatar2 from "../../img/Avatar2.png"
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -17,7 +20,43 @@ const getState = ({ getStore, getActions, setStore }) => {
        				full_name: "Antonio Campos",
         			id: 26972672913,
         			phone: "+34666777555"
+				},
+				{
+					address: "Rue 13 del Percebe",
+        			agenda_slug: "Thragull",
+        			email: "antcamal@gmail.com",
+       				full_name: "Antonio Campos",
+        			id: 26972672913,
+        			phone: "+34666777555"
+				},
+				{
+					address: "Rue 13 del Percebe",
+        			agenda_slug: "Thragull",
+        			email: "antcamal@gmail.com",
+       				full_name: "Antonio Campos",
+        			id: 26972672913,
+        			phone: "+34666777555"
+				},
+				{
+					address: "Rue 13 del Percebe",
+        			agenda_slug: "Thragull",
+        			email: "antcamal@gmail.com",
+       				full_name: "Antonio Campos",
+        			id: 26972672913,
+        			phone: "+34666777555"
+				},
+				{
+					address: "Rue 13 del Percebe",
+        			agenda_slug: "Thragull",
+        			email: "antcamal@gmail.com",
+       				full_name: "Antonio Campos",
+        			id: 26972672913,
+        			phone: "+34666777555"
 				}
+			],
+			avatar:[
+				avatar1,
+				avatar2
 			]
 		},
 		actions: {

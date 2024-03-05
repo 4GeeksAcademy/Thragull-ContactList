@@ -59,7 +59,7 @@ export const AddNewContact = () => {
                     </fieldset>
                 </div>
                 <div className="row pt-4 pe-3 justify-content-end">
-                    <button className="btn btn-secondary me-2 col-5 col-md-3 col-lg-2" type="button">Return</button>
+                    <a href="/agenda" className="btn btn-secondary me-2 col-5 col-md-3 col-lg-2" type="button">Return</a>
                     <button className="btn btn-success col-5 col-md-3 col-lg-2" type="button">Add contact</button>
                 </div>
             </div>

@@ -1,13 +1,11 @@
+
 #agenda{
-    background-color: grey;
-    opacity: 0.9;
     border: solid grey 2px;
 }
 #item{
     border: solid grey 2px;
-    background-color: lightgrey;
+    background-color: rgb(211, 211, 211, 0.9);
 }
-p{
-    opacity: 1 !important;
-    color: black;
+img{
+    height: 15vh;
 }

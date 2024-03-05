@@ -23,6 +23,9 @@ export const Login = () => {
                         <input type="password" className="form-control" id="password" placeholder="Password"/>
                     </div>
                 </div>
+                <div className="row justify-content-end">
+                    <a className="btn btn-primary col-2 ">Log in</a>
+                </div>
             </div>
         </div>
     );

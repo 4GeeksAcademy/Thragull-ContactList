@@ -1,8 +1,7 @@
 #form{
     width:60vw;
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.9);
     border: grey solid 2px;
-    opacity: 0.9;
 }
 h1 {
     text-shadow: 1px 1px 10px lightgray, -1px -1px 10px lightgray;

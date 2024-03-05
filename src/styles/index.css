@@ -4,6 +4,7 @@
 
 body {
     background: url("https://thragull-image-server.netlify.app/fondoAgenda.jpeg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
 }
