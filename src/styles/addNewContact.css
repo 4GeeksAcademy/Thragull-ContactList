@@ -1,0 +1,15 @@
+#form{
+    width:60vw;
+    background-color: lightgrey;
+    border: grey solid 2px;
+    opacity: 0.9;
+}
+h1 {
+    text-shadow: 1px 1px 10px lightgray, -1px -1px 10px lightgray;
+}
+
+@media (max-width:992px){
+    #form{
+        width:90vw;
+    }
+}

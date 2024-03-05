@@ -6,6 +6,8 @@ import { Home } from "./views/Home";
 import { Demo } from "./views/Demo";
 import { Single } from "./views/Single";
 import {Login} from "./views/Login";
+import {Agenda} from "./views/Agenda"
+import {AddNewContact} from "./views/AddNewContact"
 import injectContext from "./store/AppContext";
 
 import { Navbar } from "./component/Navbar";
@@ -25,6 +27,8 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/login" element={<Login />} />
+						<Route path="/agenda" element={<Agenda />} />
+						<Route path="/add-new-contact" element={<AddNewContact />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />

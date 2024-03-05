@@ -1,16 +1,22 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			agenda: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					address: "Rue 13 del Percebe",
+        			agenda_slug: "Thragull",
+        			email: "antcamal@gmail.com",
+       				full_name: "Antonio Campos",
+        			id: 26972672913,
+        			phone: "+34666777555"
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					address: "Rue 13 del Percebe",
+        			agenda_slug: "Thragull",
+        			email: "antcamal@gmail.com",
+       				full_name: "Antonio Campos",
+        			id: 26972672913,
+        			phone: "+34666777555"
 				}
 			]
 		},
