@@ -4,7 +4,7 @@ import logo from "../../img/logo.jpeg"
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light mb-3">
+		<nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <Link to="/" className="text-decoration-none">
           <img src={logo} id="logo" className="rounded-circle"/>

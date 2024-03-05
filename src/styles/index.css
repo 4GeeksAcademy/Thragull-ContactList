@@ -3,7 +3,7 @@
 */
 
 body {
-    background: url("/fondoAgenda.jpeg");
+    background: url("https://thragull-image-server.netlify.app/fondoAgenda.jpeg");
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
 }

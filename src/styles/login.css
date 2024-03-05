@@ -1,0 +1,37 @@
+#bg-login{
+    background-image: url("https://thragull-image-server.netlify.app/login.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    position: absolute;
+    height: 90vh;
+    width:100vw;
+}
+#login{
+    
+    border: solid rgb(9, 111, 145) 4px;
+    height: 30vh;
+    width: 40vw;
+    background-color: rgb(24, 163, 209);
+    position: absolute;
+    top:25vh;
+    left:30vw;
+    opacity:0.7;
+}
+
+#user{
+    font-weight:bold;
+    opacity: 1 !important;
+    padding-top: 7vh;
+}
+
+#pass{
+    font-weight:bold;
+    padding-top: 3vh;
+    opacity: 1 !important;
+}
+@media (max-width:768px){
+    #login{
+        width: 80vw;
+        left: 10vw;
+    }
+}
