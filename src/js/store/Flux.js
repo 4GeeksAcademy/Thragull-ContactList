@@ -4,56 +4,12 @@ import avatar2 from "../../img/Avatar2.png"
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			agenda: [
-				{
-					address: "Rue 13 del Percebe",
-        			agenda_slug: "Thragull",
-        			email: "antcamal@gmail.com",
-       				full_name: "Antonio Campos",
-        			id: 26972672913,
-        			phone: "+34666777555"
-				},
-				{
-					address: "Rue 13 del Percebe",
-        			agenda_slug: "Thragull",
-        			email: "antcamal@gmail.com",
-       				full_name: "Antonio Campos",
-        			id: 26972672913,
-        			phone: "+34666777555"
-				},
-				{
-					address: "Rue 13 del Percebe",
-        			agenda_slug: "Thragull",
-        			email: "antcamal@gmail.com",
-       				full_name: "Antonio Campos",
-        			id: 26972672913,
-        			phone: "+34666777555"
-				},
-				{
-					address: "Rue 13 del Percebe",
-        			agenda_slug: "Thragull",
-        			email: "antcamal@gmail.com",
-       				full_name: "Antonio Campos",
-        			id: 26972672913,
-        			phone: "+34666777555"
-				},
-				{
-					address: "Rue 13 del Percebe",
-        			agenda_slug: "Thragull",
-        			email: "antcamal@gmail.com",
-       				full_name: "Antonio Campos",
-        			id: 26972672913,
-        			phone: "+34666777555"
-				},
-				{
-					address: "Rue 13 del Percebe",
-        			agenda_slug: "Thragull",
-        			email: "antcamal@gmail.com",
-       				full_name: "Antonio Campos",
-        			id: 26972672913,
-        			phone: "+34666777555"
-				}
-			],
+			userName:""
+			,
+			logged: false
+			,
+			agenda: []
+			,
 			avatar:[
 				avatar1,
 				avatar2
@@ -82,6 +38,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			login: (user) =>{
+				// funcion para el Log In
+				setStore({
+					userName: user,
+					logged: true
+				});
+				console.log("login ejecutado");
+			},
+			logout: () => {
+				setStore({
+					userName:"",
+					logged: false
+				});
+				console.log("logout ejecutado")
 			}
 		}
 	};

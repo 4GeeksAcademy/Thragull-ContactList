@@ -35,7 +35,6 @@ export const Agenda = () => {
 								<div className="col-2 col-lg-1 d-flex flex-column my-auto">
 									<a><i className="fa-solid fa-pencil fs-4 mb-3"></i></a>
 									<a><i className="fa-solid fa-trash-can fs-4 "></i></a>
-
 								</div>
 							</div>
 						</li>

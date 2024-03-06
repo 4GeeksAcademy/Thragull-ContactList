@@ -3,8 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/ScrollToTop";
 
 import { Home } from "./views/Home";
-import { Demo } from "./views/Demo";
-import { Single } from "./views/Single";
 import {Login} from "./views/Login";
 import {Agenda} from "./views/Agenda"
 import {AddNewContact} from "./views/AddNewContact"
@@ -29,8 +27,6 @@ const Layout = () => {
 						<Route path="/login" element={<Login />} />
 						<Route path="/agenda" element={<Agenda />} />
 						<Route path="/add-new-contact" element={<AddNewContact />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

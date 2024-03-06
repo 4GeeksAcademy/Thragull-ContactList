@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logo.jpeg"
+import { Context } from "../store/AppContext";
+
 
 export const Navbar = () => {
+  const {store, actions} = useContext(Context);
+  const handleLogout = () => {
+    actions.logout();
+  }
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
@@ -16,26 +23,35 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse text-end" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link text-white active" aria-current="page" href="/">Home</a>
+              <Link to={"/"} className="text-decoration-none">
+                <button className="nav-link text-white active" aria-current="page">Home</button>
+              </Link>
             </li>
+            {store.logged ? 
+            <>
+              <li className="nav-item">
+                <Link to={"/agenda"} className="text-decoration-none">
+                  <button className="nav-link text-white" aria-current="page" >Agenda</button>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/agenda"} className="text-decoration-none">
+                  <button className="nav-link text-white" aria-current="page" >Welcome {store.userName}</button>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/"} className="text-decoration-none">
+                  <button className="nav-link text-white" onClick={handleLogout}>Log Out</button>
+                </Link>
+              </li>
+            </> 
+            :
             <li className="nav-item">
-              <a className="nav-link text-white" href="/login">Login</a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Action</a></li>
-                <li><a className="dropdown-item" href="#">Another action</a></li>
-                <li><a className="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
+              <Link to={"/login"} className="text-decoration-none">
+                <button className="nav-link text-white">Login</button>
+              </Link>
+            </li>}
           </ul>
-          <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
 		</nav>
