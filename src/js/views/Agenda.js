@@ -23,10 +23,10 @@ export const Agenda = () => {
 							{/* Conditional render example
 							// Check to see if the background is orange, if so, display the message*/}
 							<div className="row">
-								<div className="col-3">
+								<div className="col-4 col-lg-3">
 									<img src={store.avatar[Math.floor(Math.random()*2)]} className="rounded-circle object-fit-fill" />
 								</div>
-								<div className="col-7 col-lg-8">
+								<div className="col-6 col-lg-8">
 									<p className="mb-1 fs-4 fw-bold">{item.full_name}</p>
 									<p className="mb-0 text-secondary"><i className="fa-solid fa-map-location-dot me-2"></i>{item.address}</p>
 									<p className="mb-0 text-secondary"><i className="fa-solid fa-phone me-2"></i>{item.phone}</p>

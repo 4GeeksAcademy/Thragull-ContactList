@@ -39,11 +39,11 @@ export const AddNewContact = () => {
                     </fieldset>
                 </div>
                 <div className="row">
-                    <fieldset className="col-9">
+                    <fieldset className="col-8 col-lg-9">
                         <label for="formAddress" className="form-label">Address</label>
                         <input id="formAddress" className="form-control" type="text" placeholder="Address" required />
                     </fieldset>
-                    <fieldset className="col-3">
+                    <fieldset className="col-4 col-lg-3">
                         <label for="formZip" className="form-label">Zip Code</label>
                         <input id="formZip" className="form-control" type="text" placeholder="Zip Code" required />
                     </fieldset>
