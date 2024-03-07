@@ -2,7 +2,7 @@
 #agenda{
     border: solid grey 2px;
 }
-#item{
+.item{
     border: solid grey 2px;
     background-color: rgb(211, 211, 211, 0.9);
 }

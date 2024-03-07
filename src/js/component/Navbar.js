@@ -6,9 +6,6 @@ import { Context } from "../store/AppContext";
 
 export const Navbar = () => {
   const {store, actions} = useContext(Context);
-  const handleLogout = () => {
-    actions.logout();
-  }
 
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light">
@@ -35,13 +32,11 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to={"/agenda"} className="text-decoration-none">
-                  <button className="nav-link text-white" aria-current="page" >Welcome {store.userName}</button>
-                </Link>
+                <p className="nav-link text-white" aria-current="page" >Welcome {store.userName}</p>
               </li>
               <li className="nav-item">
                 <Link to={"/"} className="text-decoration-none">
-                  <button className="nav-link text-white" onClick={handleLogout}>Log Out</button>
+                  <button className="nav-link text-white" onClick={()=> actions.logout()}>Log Out</button>
                 </Link>
               </li>
             </> 
