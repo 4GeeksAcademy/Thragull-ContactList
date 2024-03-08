@@ -121,6 +121,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch((err) => err)
 			}
 			,
+			deleteFullAgenda: () => {
+				const store = getStore()
+
+				return fetch(`https://playground.4geeks.com/apis/fake/contact/agenda/${store.userName}`, {
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+				.then((response) => response.json())
+				.catch((err) => err);
+			}
+			,
 			login: (user) =>{
 				// funcion para el Log In
 				setStore({

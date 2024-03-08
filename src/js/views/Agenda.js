@@ -4,6 +4,8 @@ import { Modal } from "react-bootstrap";
 
 import { Context } from "../store/AppContext";
 
+import stop from "../../img/stop.png"
+
 import "../../styles/agenda.css";
 
 export const Agenda = () => {
@@ -12,11 +14,14 @@ export const Agenda = () => {
     const [showModal, setShowModal] = useState(false);
     const [contactToDelete, setContactToDelete] = useState(null);
     const [contactNameToDelete, setContactNameToDelete] = useState("");
+    const [emptyAgenda, setEmptyAgenda] = useState(true)
 
     useEffect(() => {
         if (store.agenda.length > 0) {
             actions.getAgenda();
+            setEmptyAgenda(false);
         }
+        else setEmptyAgenda(true);
     }, [store.agenda.length]);
 
     const editContact = (id) => {
@@ -50,10 +55,13 @@ export const Agenda = () => {
 
     return (
         <div id="agendaSite" className="container pb-5">
+                
             <div className="row justify-content-end">
+                <button className="btn btn-danger mt-5 me-2 col-6 col-md-3 col-lg-2">Delete Agenda</button>
                 <Link to="/add-new-contact" className="btn btn-success mt-5 me-2 col-6 col-md-3 col-lg-2">Add new contact</Link>
             </div>
-            <ul id="agenda" className="list-group my-5 rounded-4">
+            {emptyAgenda && (<div className="alert alert-info my-5">This agenda is currently empty. Add your first contact by pressing the green button</div>)}
+            {!emptyAgenda && (<ul id="agenda" className="list-group my-5 rounded-4">
                 {store.agenda.map((item, index) => {
                     return (
                         <li key={index} className="item list-group-item justify-content-between">
@@ -75,16 +83,17 @@ export const Agenda = () => {
                         </li>
                     );
                 })}
-            </ul>
+            </ul>)}
             <div className="row justify-content-end mb-5">
                 <Link to="/" className="btn btn-secondary me-2 col-6 col-md-3 col-lg-2">Back Home</Link>
             </div>
             <Modal show={showModal} onHide={() => setShowModal(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Delete Contact</Modal.Title>
+                <Modal.Header className="bg-danger" closeButton>
+                    <Modal.Title><img className="stop" src={stop}/> Warning <img className="stop" src={stop}/> </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    Are you sure you want to delete the contact <strong>{contactNameToDelete}</strong>?
+                <Modal.Body className="bg-light">
+                    You are about to delete the following contact: <strong>{contactNameToDelete}</strong><br/>
+                    Are you sure you want to proceed?
                 </Modal.Body>
                 <Modal.Footer>
                     <button className="btn btn-secondary" onClick={() => setShowModal(false)}>Cancel</button>
