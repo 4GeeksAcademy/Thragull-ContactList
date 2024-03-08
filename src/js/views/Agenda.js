@@ -1,17 +1,28 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Context } from "../store/AppContext";
 
 import "../../styles/agenda.css";
 
 export const Agenda = () => {
+	const navigate = useNavigate()
 	const { store, actions } = useContext(Context);
 	useEffect(() => {
         if (store.agenda.length > 0) {
             actions.getAgenda();
         }
     }, [store.agenda.length]);
+
+	const editContact = (id) => {
+		actions.getContactById(id)
+			.then(() => {
+				navigate("/edit-contact/" + id);
+			})
+			.catch((error) => {
+				console.error("Error getting contact:", error);
+			});
+	};
 
 	const deleteContact = (id) => {
 		actions.deleteById(id)
@@ -45,8 +56,8 @@ export const Agenda = () => {
 									<p className="mb-0 text-secondary"><i className="fa-solid fa-envelope me-2"></i>{item.email}</p>
 								</div>
 								<div className="col-2 col-lg-1 d-flex flex-column my-auto">
-									<a onClick={()=> {console.log(item.id)}}><i className="fa-solid fa-pencil fs-4 mb-3"></i></a>
-									<a><i onClick={()=> {deleteContact(item.id)}} className="fa-solid fa-trash-can fs-4 "></i></a>
+									<a onClick={()=> {editContact(item.id)}}><i className="fa-solid fa-pencil fs-4 mb-3"></i></a>
+									<a onClick={()=> deleteContact(item.id)}><i className="fa-solid fa-trash-can fs-4"></i></a>
 								</div>
 							</div>
 						</li>

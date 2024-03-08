@@ -25,6 +25,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				avatar5,
 				avatar6
 			]
+			,
+			contact:{}
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -80,6 +82,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch((err) => err)
 			}
 			,
+			getContactById: (id) => {
+				return new Promise((resolve, reject) => {
+					fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`)
+						.then((response)=> response.json())
+						.then((data) => {
+							setStore({contact: data});
+							resolve();
+						})
+						.catch((error) => {
+							reject(error);
+						});
+				});
+			}
+			,
 			deleteById: (id) => {
 				return fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
 					method: "DELETE",
@@ -89,6 +105,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 				.then((response) => response.json())
 				.catch((err) => err);
+			}
+			,
+			editContactById: (id, contact) => {
+				fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
+					method: "PUT",
+					body: JSON.stringify(contact),
+					headers: {
+						"Content-Type" : "application/json"
+					}
+				}
+				)
+				.then((response)=> response.json())
+				.then((data) => {console.log(data)})
+				.catch((err) => err)
 			}
 			,
 			login: (user) =>{
