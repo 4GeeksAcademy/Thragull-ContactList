@@ -23,5 +23,9 @@ export const Home = () => (
 			Thank you.
 			</div>
 		</div>
+		<div className="alert alert-info container">
+			Info: While Login, you can use any user and password as it is just a Login example. If the username already exist, it will return the relevant agenda.
+			If it doesn't it will create a new agenda and will guide you to create the first contact. 
+		</div>
 	</div>
 );
