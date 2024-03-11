@@ -22,7 +22,7 @@ export const Login = () => {
     }
 
 	return(
-        <div id="bg-login" className="">
+        <div id="bg-login">
             <div id="login" className="rounded-4">
                 <div id="user" className="mb-3 row">
                     <label  htmlFor="username" className="d-none d-lg-block ps-5 col-lg-2 col-form-label">Username</label>

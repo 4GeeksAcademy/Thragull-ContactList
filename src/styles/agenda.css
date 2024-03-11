@@ -12,3 +12,16 @@
 img{
     height: 15vh;
 }
+.person-name:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}
+.fa-pencil:hover{
+    cursor: pointer;
+    color:blue;
+}
+
+.fa-trash-can:hover {
+    cursor:pointer;
+    color: red;
+}

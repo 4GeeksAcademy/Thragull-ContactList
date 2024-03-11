@@ -96,7 +96,7 @@ export const Agenda = () => {
                                     <img src={store.avatar[Math.floor(Math.random()*6)]} className="rounded-circle object-fit-fill" />
                                 </div>
                                 <div className="col-6 col-lg-8">
-                                    <p onClick={() => selectContact(item.id)} className="mb-1 fs-4 fw-bold">{item.full_name}</p>
+                                    <p onClick={() => selectContact(item.id)} className="person-name mb-1 me-auto fs-4 fw-bold">{item.full_name}</p>
                                     <p className="mb-0 text-secondary"><i className="fa-solid fa-map-location-dot me-2"></i>{item.address}</p>
                                     <p className="mb-0 text-secondary"><i className="fa-solid fa-phone me-2"></i>{item.phone}</p>
                                     <p className="mb-0 text-secondary"><i className="fa-solid fa-envelope me-2"></i>{item.email}</p>

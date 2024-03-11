@@ -5,6 +5,8 @@ import avatar3 from "../../img/Avatar3.png"
 import avatar4 from "../../img/Avatar4.png"
 import avatar5 from "../../img/Avatar5.png"
 import avatar6 from "../../img/Avatar6.png"
+import notFound1 from "../../img/404.jpeg"
+import notFound2 from "../../img/404-2.jpeg"
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -27,6 +29,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 			,
 			contact:{}
+			,
+			notFound:[
+				notFound1,
+				notFound2
+			]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
