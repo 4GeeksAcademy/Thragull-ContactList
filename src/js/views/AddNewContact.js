@@ -41,8 +41,14 @@ export const AddNewContact = () => {
             setCity("");
             setCountry("");
             navigate("/agenda");
-            actions.addContact(contact);
-            actions.getAgenda();
+            actions.addContact(contact)
+            .then(() => {
+                actions.getAgenda();
+                navigate("/agenda");
+            })
+            .catch((error) => {
+                console.error("Error adding contact:", error);
+            });
         }
         else
         {

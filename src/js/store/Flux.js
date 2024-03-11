@@ -69,7 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			}
 			,
 			addContact: (contact) => {
-				fetch(`https://playground.4geeks.com/apis/fake/contact`, {
+				return fetch(`https://playground.4geeks.com/apis/fake/contact`, {
 					method: "POST",
 					body: JSON.stringify(contact),
 					headers: {

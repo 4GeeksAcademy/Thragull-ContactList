@@ -1,0 +1,9 @@
+#singleContact{
+    border: solid grey 2px;
+    background-color: rgb(211, 211, 211, 0.9);
+}
+#data{
+    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+    max-width: 300px; /* Ajusta el ancho máximo del contenedor de datos */
+    margin: 0 auto; /* Centra el contenedor de datos horizontalmente */
+}
